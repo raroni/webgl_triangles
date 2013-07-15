@@ -11,16 +11,16 @@ App.prototype = {
     this.context.enable(this.context.DEPTH_TEST);
   },
   setupScene: function() {
-    var triangle1 = new Triangle(this.program, [0.5, 0.5, 0.5], [
+    var triangle1 = new Triangle(this.program, [0.8, 0.8, 0.8], [
+      -0.5, -0.4, 0,
+      -0.5, 0.7, 0,
+      0.5, 0.7, 0
+    ]);
+
+    var triangle2 = new Triangle(this.program, [0.5, 0.5, 0.5], [
       -0.7, -0.8, -0.9,
       -0.7, 0.1, -0.9,
       0.4, 0.3, -0.9
-    ]);
-
-    var triangle2 = new Triangle(this.program, [0.8, 0.8, 0.8], [
-      -0.5, -0.5, 0,
-      -0.5, 0.7, 0,
-      0.5, 0.7, 0
     ]);
 
     this.triangles.push(triangle1);
